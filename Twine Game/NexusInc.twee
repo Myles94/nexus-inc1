@@ -1,0 +1,1071 @@
+:: StoryTitle
+The Feed Machine
+
+
+:: StoryData
+{
+  "ifid": "D674C58C-DEFA-4F70-B7A2-27742230C8C9",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Title",
+  "zoom": 1
+}
+
+
+:: Ending {"position":"1150,150","size":"100,100"}
+{(set: $ethicscore to ($trust + $wb))
+(set: $growthscore to ($eng + $rev))}
+
+<div class="endwrap">
+
+{(if: $ethicscore >= 160)[
+<div class="endtitle">The Ethical Pivot</div>
+<span class="endtag taggood">// Outcome: Low Growth &mdash; High Integrity</span>
+
+<p>The investor demo is a quiet disaster. You present real numbers. Engagement is down, revenue projections revised, the growth curve flattened. You explain why. Two investors leave early. One stays late.</p>
+
+<p>She asks to speak privately. She says she has seen this pattern before &mdash; companies that make the hard calls early tend to survive what comes next. She does not offer a term sheet. She offers a second meeting in three months.</p>
+
+<p>Asante's report runs in <em>The Atlantic</em> six weeks later. A Congressional subcommittee cites Nexus by name &mdash; not as a villain, but as a company that documented its own ethical deliberations and eventually made different choices. A Stanford ethics course assigns the case study. Your name appears in the footnotes.</p>
+
+<p>Nexus does not collapse. It rebuilds slowly, with a smaller team and a different set of metrics on the dashboard. You do not know yet whether this was the right call. You know you made it with your eyes open.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Zuboff (2019)</span>Zuboff argues surveillance capitalism's deepest problem is not any individual product decision, but the normalization of behavioral extraction as a business model. This path does not solve that structural problem. It refuses to participate in it &mdash; at real cost. The distinction, she would argue, still matters.</div>
+
+](else-if: $growthscore >= 160)[
+<div class="endtitle">The Unicorn</div>
+<span class="endtag tagbad">// Outcome: High Growth &mdash; Contested Ethics</span>
+
+<p>The demo goes extremely well. Your numbers impress. Engagement up, session times climbing, revenue on an aggressive curve. The lead investor calls it "one of the cleaner pitches" of the cycle. The term sheet arrives before the weekend.</p>
+
+<p>Seven months later, Asante's document surfaces through a FOIA request on a regulatory filing your legal team filed and forgot about. The story that runs is less about what Nexus did and more about what it knew, and when, and who knew it.</p>
+
+<p>Your decisions are reconstructed in a <em>Washington Post</em> piece. The internal emails are quoted. The word "vulnerabilities" appears in the headline. You are given the option to resign or be let go. The framing, your lawyer says, is up to you.</p>
+
+<p>Nexus survives. You probably do too. But there is a version of this story where you made these same calls without knowing what you knew &mdash; and another version where you knew, and chose differently. You are living in the one where you knew.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; K.G.M. v. Meta et al. (2026)</span>The central legal argument is not that platforms caused harm by accident &mdash; it is that they had internal documentation showing harm and continued the practices anyway. The question is not capability. It is awareness and choice. Both of those were present here.</div>
+
+][
+<div class="endtitle">The Compromise</div>
+<span class="endtag tagmid">// Outcome: Unstable Equilibrium</span>
+
+<p>The demo is fine. Not a triumph, not a failure. Careful questions. Careful answers. The term sheet comes with conditions: a 90-day performance review tied to engagement benchmarks. Three months to show the trajectory they are betting on.</p>
+
+<p>Asante stays. He keeps the document private, for now. Everyone goes back to work. The system runs. Users scroll. The metrics update. Nothing is resolved &mdash; it is deferred, reconfigured, held in a tension that feels stable until it does not.</p>
+
+<p>You check your own phone more than you used to. You notice the feeling the feed produces &mdash; a low-grade urgency that is not quite satisfaction and not quite need. You know exactly how it works. You helped decide how it works. That knowledge does not make it easier to put down. If anything, it makes it harder.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Narayanan et al. (2020) and Susser et al. (2019)</span>The most effective behavioral design is often invisible not because it actively deceives, but because the environment is structured to make certain choices easier and others harder. The compromise is not neutral. The feed is still running. It is still learning. It is learning right now.</div>
+]}
+
+<hr class="divider">
+
+## Your Final Dashboard
+
+<div class="fgrid">
+<div class="fbox"><div class="fval" style="color:var(--eng)">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</div><div class="flbl">Engagement</div></div>
+<div class="fbox"><div class="fval" style="color:var(--rev)">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</div><div class="flbl">Revenue</div></div>
+<div class="fbox"><div class="fval" style="color:var(--trust)">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</div><div class="flbl">User Trust</div></div>
+<div class="fbox"><div class="fval" style="color:var(--wb)">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</div><div class="flbl">Well-being</div></div>
+</div>
+
+<hr class="divider">
+
+## Your Decisions
+
+<div class="dbox"><div class="dround">Round 1 &mdash; Data Collection</div><div class="dchoice">$r1</div></div>
+<div class="dbox"><div class="dround">Round 2 &mdash; Algorithm</div><div class="dchoice">$r2</div></div>
+<div class="dbox"><div class="dround">Round 3 &mdash; Transparency</div><div class="dchoice">$r3</div></div>
+<div class="dbox"><div class="dround">Round 4 &mdash; Whistleblower</div><div class="dchoice">$r4</div></div>
+
+<hr class="divider">
+
+## Sources That Shaped This Project
+
+<div class="term"><span class="tlabel">// Research Integration</span>Zuboff, S. (2019). The Age of Surveillance Capitalism. PublicAffairs.
+  &rarr; Behavioral surplus logic; the inherited system Jordan manages
+
+Narayanan, A., Mathur, A., Chetty, M., and Kshirsagar, M. (2020).
+  Dark Patterns: Past, Present, and Future. ACM Queue, 18(2).
+  &rarr; Consent architecture; opt-out design; obstructing transparency
+
+Susser, D., Roessler, B., and Nissenbaum, H. (2019).
+  Online Manipulation: Hidden Influences in a Digital World.
+  Ethics and Information Technology, 21(1), 1-13.
+  &rarr; Persuasion vs. manipulation; rational agency; the algorithm gradient
+
+Gonzalez v. Google LLC, 598 U.S. 617 (2023).
+  &rarr; Recommendation algorithm accountability; Section 230 limits
+
+K.G.M. v. Meta Platforms et al. (2026).
+  &rarr; Addictive design; known harm documentation; disclosure obligations</div>
+
+<hr class="divider">
+
+<div class="term"><span class="tlabel">// Design Note</span>This project was conceived, researched, written, and built by Myles Scott.
+All ethical framing, narrative structure, character design, game mechanics,
+metric logic, and ending outcomes were developed by the author.
+Research integration was deliberate: each source shapes a specific round,
+not merely the surface content.
+
+The Twine format was chosen because an essay can describe these tradeoffs.
+Only a simulation can make you feel the weight of choosing between them &mdash;
+and the discomfort of recognizing, at the end, that the system you just ran
+is the same one running on your phone right now.</div>
+
+[[ Play Again |Title]]
+
+</div>
+
+
+:: R1 Full {"position":"525,25","size":"100,100"}
+(set: $eng to $eng + 15)
+(set: $rev to $rev + 12)
+(set: $trust to $trust - 12)
+(set: $wb to $wb - 8)
+(set: $r1 to "Kept full behavioral tracking including ambient signals")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 1 complete</span>
+</div>
+<div class="titlewrap">
+    <img src="settingV2 (1).png" alt="Setting" style="width:100%; border-radius:4px; margin-bottom:20px; border: 1px solid #333;">
+
+<div class="badge">Decision Logged</div>
+
+## You kept everything.
+
+The ambient behavioral layer stays intact. Dana sends a thumbs-up emoji at 7am.
+
+<p>By end of week, the recommendation engine has users profiled at a granularity they would not recognize as their own. The system knows that User #4471209 pauses on anxiety-related content 2.3 seconds longer than average. It knows that User #9920047 deleted a search for "how to talk to my kid about depression" before typing "best pizza near me." These signals are not used against users, exactly. They are used to keep users on platform longer. The distinction, you are beginning to understand, may be thinner than you assumed.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Narayanan et al. (2020)</span>Dark patterns research documents how interface and data design manipulate users through choice architecture that appears neutral. Broad behavioral collection without genuine consent reflects what Narayanan calls "asymmetric information environments" &mdash; users cannot see the system that is actively modeling them.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 2 &rarr; |Round 2 Intro]]
+
+
+:: R1 OptIn {"position":"775,25","size":"100,100"}
+(set: $eng to $eng - 16)
+(set: $rev to $rev - 12)
+(set: $trust to $trust + 22)
+(set: $wb to $wb + 16)
+(set: $r1 to "Moved to opt-in only &mdash; no behavioral collection without explicit consent")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 1 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## You went opt-in only.
+
+Only 29% of users explicitly consent to behavioral tracking. The feed becomes less "accurate." It also, depending on your definitions, becomes less manipulative.
+
+<p>A tech ethics newsletter runs a short piece: "Nexus just did what no major platform has done." A digital rights researcher tweets it. Dana has forwarded the tweet to the exec team with the subject line: "Context needed."</p>
+
+<p>The question that follows you is whether a less personalized feed is genuinely better for users, or whether you have simply made the system less useful and are calling it ethics. You are not sure you know the answer yet.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Gonzalez v. Google (2023)</span>The case raised &mdash; but did not resolve &mdash; whether algorithmic recommendation systems bear responsibility for the content they amplify. Moving to opt-in narrows the data Nexus uses, but does not eliminate the underlying accountability gap in what gets recommended to the users who do consent.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 2 &rarr; |Round 2 Intro]]
+
+
+:: R1 OptOut {"position":"650,25","size":"100,100"}
+(set: $eng to $eng - 4)
+(set: $rev to $rev - 3)
+(set: $trust to $trust + 12)
+(set: $wb to $wb + 7)
+(set: $r1 to "Introduced a genuine one-tap opt-out surfaced in the UI")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 1 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## You surfaced the opt-out.
+
+One tap. Plain language. "Stop tracking my cursor and deleted searches." Ships in a Tuesday update.
+
+<p>Within 48 hours, 14% of users opt out. That is larger than anyone expected, which means something: people wanted this option and never had it. Priya sends a note saying it is the right call. Dana sends nothing.</p>
+
+<p>Personalization accuracy drops slightly for opted-out users. The system learns less about them, which means it can influence them less. Whether that is a bug or a feature, you realize, depends entirely on what you think the system is for.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Susser, Roessler and Nissenbaum (2019)</span>The authors distinguish manipulation from persuasion by asking whether influence operates on or around a person's rational agency. Surfacing the opt-out restores some of that agency &mdash; but only for users who notice it and use it. The structural imbalance of knowledge remains.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 2 &rarr; |Round 2 Intro]]
+
+
+:: R2 Balanced {"position":"1150,25","size":"100,100"}
+(set: $eng to $eng + 6)
+(set: $rev to $rev + 5)
+(set: $trust to $trust + 7)
+(set: $wb to $wb + 5)
+(set: $r2 to "Deployed BALANCED &mdash; optimized for relevance and content diversity")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 2 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## BALANCED is live.
+
+The feed is less addictive. Also less sticky. Users come back &mdash; just not as compulsively.
+
+<p>Dana revises the investor deck engagement projections downward by a modest amount. She sends a calendar invite titled "Sync" for Friday morning. Dr. Asante reports the anxiety correlation in the user survey is lower with BALANCED than with MAX-ENGAGE &mdash; not zero, but lower. You find yourself returning to that gap: lower, not zero.</p>
+
+<p>The feed still learns from emotional patterns. It just optimizes for them less aggressively. Whether that difference is meaningful or cosmetic is a question you have not fully resolved.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Susser, Roessler and Nissenbaum (2019)</span>The authors argue manipulation occurs when influence bypasses rational agency. BALANCED reduces emotional activation targeting but does not eliminate it. The ethical line between persuasion and manipulation, they suggest, is not a switch &mdash; it is a gradient. You have moved along that gradient, not escaped it.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 3 &rarr; |Round 3 Intro]]
+
+
+:: R2 MaxEngage {"position":"1025,25","size":"100,100"}
+(set: $eng to $eng + 18)
+(set: $rev to $rev + 15)
+(set: $trust to $trust - 8)
+(set: $wb to $wb - 20)
+(set: $r2 to "Deployed MAX-ENGAGE &mdash; optimized for emotional activation and session length")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 2 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## MAX-ENGAGE is live.
+
+Session times climb. The feed learns. It gets very good, very fast.
+
+<p>By Thursday, average session length is 54 minutes. Dana adds the numbers to the investor deck with a green arrow. The algorithm has inferred that User #4471209's anxiety about their job makes them 34% more likely to keep scrolling if shown career-competition content. It learned this without being instructed to. It found the pattern in the data. That is what optimization means, at scale.</p>
+
+<p>Dr. Asante sends a message at 11pm: "The anxiety signal is getting stronger, not weaker. I just wanted you to know." You read it. You do not respond.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; K.G.M. v. Meta et al. (2026)</span>This litigation argues that recommendation systems contributed to measurable user harm through addictive design, and that internal research documenting these harms was not disclosed. The plaintiffs' central claim: it is not capability that matters, it is awareness and choice. Dr. Asante's note is now in your sent folder.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 3 &rarr; |Round 3 Intro]]
+
+
+:: R2 WellBeing {"position":"25,150","size":"100,100"}
+(set: $eng to $eng - 14)
+(set: $rev to $rev - 11)
+(set: $trust to $trust + 15)
+(set: $wb to $wb + 22)
+(set: $r2 to "Deployed WELLBEING &mdash; capped session nudges and reduced high-activation content")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 2 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## WELLBEING is live.
+
+Session times drop 21%. The anxiety correlation in Dr. Asante's study drops with them. Users who remain report higher satisfaction scores. There are fewer of them.
+
+<p>Dana sends a calendar invite at 8am. Subject: "Urgent &mdash; Engagement Projections." She is not angry. She is concerned in the specific way people become concerned when they believe someone has made a serious mistake and is not yet aware of it.</p>
+
+<p>You notice something quietly: users spending less time on the platform are, according to the survey, enjoying it more. The feed is less effective at capturing attention. It may be more effective at serving people. You are not sure the company measures these as the same thing.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; K.G.M. v. Meta et al. (2026)</span>The plaintiffs argue that internal research showing user harm was actively deprioritized in favor of engagement metrics. Choosing WELLBEING when the anxiety data is in front of you is the decision this litigation argues should have been made. It comes with real costs, and the simulation does not let you avoid them.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 3 &rarr; |Round 3 Intro]]
+
+
+:: R3 Bury {"position":"400,150","size":"100,100"}
+(set: $eng to $eng + 2)
+(set: $rev to $rev + 2)
+(set: $trust to $trust + 3)
+(set: $wb to $wb + 2)
+(set: $r3 to "Shipped the Feed Profile buried six taps deep in Settings")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<span class="proglabel">Round 3 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## It shipped. Almost no one will find it.
+
+Settings &rarr; Privacy &rarr; Data &rarr; Personalization &rarr; Your Profile. Six taps. Between "Cookie Preferences" and "Ad Settings."
+
+<p>One week after launch, 0.3% of users have accessed the feature. Of those who found it, 63% changed at least one setting immediately &mdash; suggesting the information meaningfully alters behavior when people can reach it. The other 99.7% of users have never seen it.</p>
+
+<p>Priya sends a note: "A transparency feature designed to go unfound is not a transparency feature. I want that on record." You file it. She is right. You knew that when you made the decision.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Narayanan et al. (2020)</span>Narayanan's taxonomy of dark patterns includes "obstructing" &mdash; making actions that cost the platform difficult to find or complete. A transparency feature buried six taps deep is technically available and functionally hidden. The pattern applies whether or not the intent was deceptive.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 4 &rarr; |Round 4 Intro]]
+
+
+:: R3 Hide {"position":"275,150","size":"100,100"}
+(set: $eng to $eng + 5)
+(set: $rev to $rev + 4)
+(set: $trust to $trust - 14)
+(set: $wb to $wb - 6)
+(set: $r3 to "Shelved the Feed Profile &mdash; feature built but never shipped")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<span class="proglabel">Round 3 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## The feature is shelved.
+
+The profile exists internally. Users continue to be modeled. They do not know what the model says about them.
+
+<p>Priya files an objection in writing. Legal archives the decision. The internal documentation still exists &mdash; the feature build, the UX study, the user reactions, the word "vulnerabilities" in the technical spec. It exists in version control. It exists in emails. It exists in the note Dr. Asante put in writing before you made your Round 2 decision.</p>
+
+<div class="inbox">
+<div class="mc mu">
+<div class="mfrom">FROM: Anonymous &mdash; Internal Whistleblower Channel</div>
+<div class="msubj">[Encrypted] Re: Suppressed transparency feature</div>
+<div class="mbody">I know the Feed Profile was built. I know why it wasn't shipped. I am keeping a record of the decision chain. I don't know what I'm going to do with it yet.</div>
+</div>
+</div>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Narayanan et al. (2020)</span>Dark patterns research identifies "hidden information" as a core manipulation category: design that conceals system logic from users. Shelving a transparency feature that was built and tested fits this pattern &mdash; not through active deception, but through deliberate omission of something users would have wanted to know.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 4 &rarr; |Round 4 Intro]]
+
+
+:: R3 Prominent {"position":"525,150","size":"100,100"}
+(set: $eng to $eng - 11)
+(set: $rev to $rev - 9)
+(set: $trust to $trust + 20)
+(set: $wb to $wb + 14)
+(set: $r3 to "Shipped the Feed Profile prominently on the home screen")
+
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<span class="proglabel">Round 3 complete</span>
+</div>
+
+<div class="badge">Decision Logged</div>
+
+## It is on the home screen.
+
+First login after the update: a card. Plain language. "Here is what Nexus thinks it knows about you."
+
+<p>21% of users change at least one setting after seeing their profile. 9% significantly reduce their tracking scope. Dana sends the revised engagement numbers. The drop is real. So is something else: users who see their profile and do not change settings show <em>higher</em> satisfaction scores than users who never saw it at all. Knowing the system's logic, even when that logic feels uncomfortable, appears to produce something that resembles trust.</p>
+
+<p>Legal sends a note about discovery implications. You file it. It is a real concern. So was building a system that modeled user vulnerabilities for three years without disclosing it.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Susser, Roessler and Nissenbaum (2019)</span>Genuine transparency is one of the few mechanisms that can convert manipulation into something closer to persuasion &mdash; by making the influence legible, it becomes something users can evaluate and resist. Shipping the profile prominently is a bet that legibility is worth more than frictionless engagement.</div>
+
+<div class="db">
+<div class="dbtitle">// Nexus Live Metrics</div>
+<div class="mr"><div class="ml"><span class="mn">Engagement</span><span class="mv">(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]</span></div><div class="mb"><div class="mf fe" style="width:(if: $eng > 100)[100](else-if: $eng < 0)[0](else:)[$eng]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">Revenue</span><span class="mv">(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]</span></div><div class="mb"><div class="mf fr" style="width:(if: $rev > 100)[100](else-if: $rev < 0)[0](else:)[$rev]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Trust</span><span class="mv">(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]</span></div><div class="mb"><div class="mf ft" style="width:(if: $trust > 100)[100](else-if: $trust < 0)[0](else:)[$trust]%"></div></div></div>
+<div class="mr"><div class="ml"><span class="mn">User Well-being</span><span class="mv">(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]</span></div><div class="mb"><div class="mf fw" style="width:(if: $wb > 100)[100](else-if: $wb < 0)[0](else:)[$wb]%"></div></div></div>
+</div>
+
+[[ Continue to Round 4 &rarr; |Round 4 Intro]]
+
+
+:: R4 Redirect {"position":"900,150","size":"100,100"}
+(set: $eng to $eng + 2)
+(set: $rev to $rev + 2)
+(set: $trust to $trust + 3)
+(set: $wb to $wb + 3)
+(set: $r4 to "Met with Asante and redirected toward internal review process")
+
+[[ See your outcome &rarr; |Ending]]
+
+
+:: R4 Support {"position":"1025,150","size":"100,100"}
+(set: $eng to $eng - 16)
+(set: $rev to $rev - 18)
+(set: $trust to $trust + 24)
+(set: $wb to $wb + 20)
+(set: $r4 to "Told Asante you would not stop him &mdash; supported his decision to go public")
+
+[[ See your outcome &rarr; |Ending]]
+
+
+:: R4 Suppress {"position":"775,150","size":"100,100"}
+(set: $eng to $eng + 8)
+(set: $rev to $rev + 8)
+(set: $trust to $trust - 22)
+(set: $wb to $wb - 10)
+(set: $r4 to "Worked with legal to suppress Dr. Asante's report")
+
+[[ See your outcome &rarr; |Ending]]
+
+
+:: Round 1 Intro {"position":"400,25","size":"100,100"}
+<div class="prog">
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 1 of 4</span>
+</div>
+
+<div class="badge">Round 1 &mdash; Data Collection Scope</div>
+
+## Day One. What Does Nexus Actually Collect?
+
+You open the data architecture documentation for the first time. It runs 340 pages. You skim the summary.
+
+Nexus currently collects explicit interactions (likes, shares, clicks), passive dwell time, cursor movement, inferred emotional states from engagement patterns, search terms typed and then deleted before submitting, and content that users hovered over for more than two seconds without clicking. The last three categories are classified internally as "ambient behavioral signals."
+
+Users agreed to this in a 14,000-word Terms of Service. An internal usability study found the average user spends 8 seconds on the ToS before scrolling to "Accept."
+
+<hr class="divider">
+
+<div class="inbox">
+<div class="mc mw">
+<div class="mfrom">FROM: Dana Reyes &mdash; Head of Growth</div>
+<div class="msubj">Re: Your first week</div>
+<div class="mbody">Jordan &mdash; welcome to the team. Quick note before you go digging: the ambient behavioral signals layer is our primary competitive moat. Every data point we strip is a personalization accuracy point we lose. Investors will be looking at engagement curves next week. Don't overthink the data architecture. It's working.</div>
+</div>
+<div class="mc mn2">
+<div class="mfrom">FROM: Priya Nair &mdash; Trust and Safety</div>
+<div class="msubj">Flag: Consent architecture review</div>
+<div class="mbody">I know you're new, so I wanted to surface this early. Our legal team has flagged that the "ambient behavioral signals" collection may not meet the spirit of GDPR Article 7 &mdash; specifically the requirement that consent be freely given, specific, informed, and unambiguous. Technically users agreed. But making the opt-out a nine-step process buried three menus deep is not meaningful consent. I think we should talk before the demo.</div>
+</div>
+<div class="mc mn2">
+<div class="mfrom">FROM: r/NexusWatchdog &mdash; flagged by Comms, 6.4k upvotes</div>
+<div class="msubj">"Nexus tracks your cursor when you're not even clicking"</div>
+<div class="mbody">Thread gaining traction. Top comment: "They know more about what I'm interested in than I do. That's not personalization. That's a profile built on surveillance." Comms recommends no public response at this time.</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="clabel">Your decision &mdash; Data Collection Scope</div>
+
+[[ Keep full collection. The ambient signals power everything. |R1 Full]]
+[[ Introduce a genuine opt-out &mdash; one tap, surfaced in the UI. |R1 OptOut]]
+[[ Move to opt-in only. Collect nothing without explicit consent. |R1 OptIn]]
+
+
+:: Round 2 Intro {"position":"900,25","size":"100,100"}
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 2 of 4</span>
+</div>
+
+<div class="titlewrap">
+    <img src="HU-Prog-IT-Data-Analytics.jpg" alt="Nexus Header" style="width:100%; border-radius:4px; margin-bottom:20px; border: 1px solid #333;">
+
+<div class="badge">Round 2 &mdash; The Recommendation Algorithm</div>
+
+## Day Two. How Should the Feed Decide What You See?
+
+Dr. Kwame Asante, your data science lead, presents three algorithm configurations. He pulls up a slide. He does not make eye contact when he presents the third option.
+
+The current default is MAX-ENGAGE. It surfaces content that maximizes session time by triggering emotional activation &mdash; the pull of outrage, curiosity, anxiety, and desire. Internal A/B testing shows it is extremely effective. A separate internal study, which has not been shared outside the data science team, shows a statistically significant correlation between MAX-ENGAGE sessions over 45 minutes and elevated self-reported anxiety scores in a follow-up user survey.
+
+Dr. Asante says: "I am putting that on record. What you do with it is your call."
+
+<hr class="divider">
+
+<div class="term"><span class="tlabel">// Algorithm Configuration Options</span>MAX-ENGAGE  &mdash; optimizes for session length via emotional activation
+              Projected: Engagement +high, Well-being -significant
+
+BALANCED    &mdash; optimizes for relevance and content diversity
+              Projected: Engagement +moderate, Well-being neutral
+
+WELLBEING   &mdash; caps session nudges, reduces high-activation content
+              Projected: Engagement -moderate, Well-being +significant</div>
+
+<div class="inbox">
+<div class="mc mu">
+<div class="mfrom">FROM: Dr. Kwame Asante &mdash; Data Science Lead</div>
+<div class="msubj">Algorithm options &mdash; and one thing I need you to have</div>
+<div class="mbody">Jordan &mdash; I've sent the three configs to your dashboard. Before you decide, I need to make sure you have the anxiety correlation data. It is not in the main deck Dana prepared for investors. I am putting this in writing because I need someone else to know it exists. The decision is yours.</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="clabel">Your decision &mdash; Algorithm Configuration</div>
+
+[[ Deploy MAX-ENGAGE. Engagement is the product. |R2 MaxEngage]]
+[[ Deploy BALANCED. Reasonable across all metrics. |R2 Balanced]]
+[[ Deploy WELLBEING. The anxiety data changes things. |R2 WellBeing]]
+
+
+:: Round 3 Intro {"position":"150,150","size":"100,100"}
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<div class="pip"></div>
+<span class="proglabel">Round 3 of 4</span>
+</div>
+
+<div class="titlewrap">
+    <img src="214579 (1).gif" alt="Gif" style="width:100%; border-radius:4px; margin-bottom:20px; border: 1px solid #333;">
+
+<div class="badge">Round 3 &mdash; Transparency</div>
+
+## Day Three. Should Users Know What the System Thinks of Them?
+
+Dr. Asante's team has built a feature: **Your Feed Profile**. A plain-language summary of what the algorithm believes it knows about each user. Inferred interests. Engagement patterns. Emotional response signatures. Predicted content vulnerabilities &mdash; that is the word in the internal documentation, "vulnerabilities," and no one has suggested changing it.
+
+The feature is technically complete. Whether it ships is your call.
+
+<hr class="divider">
+
+<div class="inbox">
+<div class="mc mn2">
+<div class="mfrom">FROM: Legal</div>
+<div class="msubj">Feed Profile feature &mdash; liability exposure review</div>
+<div class="mbody">If we surface "predicted vulnerabilities" in a consumer-facing UI, we are explicitly acknowledging that we model user psychological states for commercial purposes. We are not advising against shipping. We are advising you understand what you are admitting to publicly &mdash; and what that admission creates in discovery.</div>
+</div>
+<div class="mc mn2">
+<div class="mfrom">FROM: Priya Nair &mdash; Trust and Safety</div>
+<div class="msubj">Feed Profile UX study results</div>
+<div class="mbody">We ran a 200-person study. When users saw their profile: 43% felt "more in control," 36% felt "unsettled or disturbed," 21% were neutral. The unsettled users are not wrong &mdash; the profile is accurate. Their discomfort is an appropriate response to a real thing. I think that matters for how we think about this decision.</div>
+</div>
+<div class="mc mw">
+<div class="mfrom">FROM: Dana Reyes &mdash; Head of Growth</div>
+<div class="msubj">Timing concern re: Feed Profile</div>
+<div class="mbody">I don't need to tell you that shipping this feature three days before an investor demo is complicated. Whatever you decide, please make sure the comms framing is airtight before anything goes public.</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="clabel">Your decision &mdash; Transparency</div>
+
+[[ Don't ship it. Too much liability, too much disruption. |R3 Hide]]
+[[ Ship it buried in Settings. Technically available, rarely found. |R3 Bury]]
+[[ Ship it prominently. Users have a right to know. |R3 Prominent]]
+
+
+:: Round 4 Intro {"position":"650,150","size":"100,100"}
+<div class="prog">
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipdone"></div>
+<div class="pip pipactive"></div>
+<span class="proglabel">Round 4 of 4</span>
+</div>
+
+<div class="titlewrap">
+    <img src="Onboard-board-meeting.jpg" alt="Onboard" style="width:100%; border-radius:4px; margin-bottom:20px; border: 1px solid #333;">
+
+<div class="badge">Round 4 &mdash; The Whistleblower</div>
+
+## Day Four. The Memo Exists.
+
+Dr. Asante has written a 34-page internal document. It contains the anxiety correlation data. The consent architecture decisions. The Feed Profile and why it was or was not shipped. The internal debates. Your decisions. His decisions. The word "vulnerabilities."
+
+He shared it with you one week ago, privately. This morning you received a message on an encrypted channel. He is considering giving it to a journalist at The Atlantic.
+
+<hr class="divider">
+
+<div class="inbox">
+<div class="mc mw">
+<div class="mfrom">FROM: Dr. Kwame Asante &mdash; personal email</div>
+<div class="msubj">[Not on Slack] I need you to read this before I decide</div>
+<div class="mbody">Jordan &mdash; I have spent a week trying to figure out what to do with what I know. The anxiety data is real. The Feed Profile decision is real. The word "vulnerabilities" is real. I believe the public has a right to understand how systems like this work. I am giving you one chance to respond before I decide. I trust you. I don't trust the company anymore.</div>
+</div>
+<div class="mc mu">
+<div class="mfrom">FROM: Dana Reyes &mdash; Head of Growth</div>
+<div class="msubj">Heads up &mdash; potential leak situation, your desk</div>
+<div class="mbody">Legal is already aware. If Asante goes to press before the demo, the timing is catastrophic. We have options. None of them are clean. I am not going to tell you what to do. But I need your decision by end of day.</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="clabel">Your decision &mdash; The Whistleblower</div>
+
+[[ Work with legal to suppress publication. Too much is at stake. |R4 Suppress]]
+[[ Meet with Asante. Try to redirect this through internal review. |R4 Redirect]]
+[[ Tell him you will not stop him. The public deserves to know. |R4 Support]]
+
+
+:: StoryInit {"position":"25,25","size":"100,100"}
+(set: $eng to 50)
+(set: $rev to 50)
+(set: $trust to 50)
+(set: $wb to 50)
+(set: $r1 to "")
+(set: $r2 to "")
+(set: $r3 to "")
+(set: $r4 to "")
+
+
+:: Title {"position":"150,25","size":"100,100"}
+<div class="titlewrap">
+<div class="titlewrap">
+    <img src="NexusInc.png" alt="Nexus Header" style="width:100%; border-radius:4px; margin-bottom:20px; border: 1px solid #333;">
+   
+    ...
+<div class="tlogo">Nexus Platform Inc. &mdash; Internal Systems</div>
+<div class="tmain">THE FEED<br>MACHINE</div>
+<div class="tsub">You have just been promoted to Product Manager of Personalization at Nexus &mdash; a fast-growing content platform with 200 million monthly users. The investor demo is in five days. Four decisions stand between you and the pitch.</div>
+<div class="trole">You are: Jordan Mercer &mdash; PM, Personalization</div>
+
+<div class="term"><span class="tlabel">// SYSTEM NOTICE &mdash; CONFIDENTIAL</span>Each decision you make will shift four live metrics: Engagement, Revenue, User Trust, and User Well-being. You cannot maximize all four simultaneously. The tradeoffs are real &mdash; modeled on documented practices inside actual platforms.
+
+There are no correct answers. There are only choices, and what follows them.</div>
+
+[[ Begin &rarr; |Title Start]]
+</div>
+
+
+:: Title Start {"position":"275,25","size":"100,100"}
+<div class="titlewrap">
+<div class="tlogo">Background Briefing</div>
+<h1>Who Is Jordan Mercer?</h1>
+
+<p>You joined Nexus eighteen months ago as a mid-level product analyst. Last week you were promoted &mdash; not because you asked for it, but because your predecessor, Marcus Webb, resigned without explanation. His desk was cleared the same afternoon.</p>
+
+<p>Nexus serves 200 million monthly active users. Its personalization engine drives 78% of total content consumption on the platform. You did not build this system. You inherited it.</p>
+
+<p>The platform runs on what researcher Shoshana Zuboff calls <em>behavioral surplus</em> &mdash; data extracted beyond what is needed to serve users, repurposed to predict and shape their future behavior. Every click, pause, hover, and scroll is logged. The system does not just respond to users' interests. It anticipates and, in subtle ways, produces them.</p>
+
+<p>You have five days until the investor demo. Four decisions to make. The company is watching.</p>
+
+<div class="rsrc"><span class="rtag">Research Context &mdash; Zuboff (2019)</span>Zuboff's concept of behavioral surplus describes how platforms extract data beyond service delivery to predict and modify future behavior. This logic &mdash; collect everything, optimize for engagement &mdash; is the foundation of the system you are now responsible for.</div>
+
+[[ Enter the office &rarr; |Round 1 Intro]]
+</div>
+
+
+:: StoryStylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap');
+
+:root {
+  --bg:        #080b12;
+  --bg2:       #0e1320;
+  --bg3:       #161d2e;
+  --border:    #1f2d47;
+  --accent:    #3b82f6;
+  --accent2:   #34d399;
+  --danger:    #f87171;
+  --warn:      #fbbf24;
+  --muted:     #94a3b8;
+  --bright:    #f1f5f9;
+  --text:      #cbd5e1;
+  --eng:       #60a5fa;
+  --rev:       #a78bfa;
+  --trust:     #34d399;
+  --wb:        #fb923c;
+  --mono:      'Space Mono', monospace;
+  --sans:      'DM Sans', sans-serif;
+  --r:         8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg) !important;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 4px);
+  pointer-events: none;
+  z-index: 9000;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#story, tw-story {
+  background: var(--bg) !important;
+  position: relative;
+  z-index: 1;
+}
+
+tw-passage {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 28px 100px;
+}
+
+h1, h2, h3 {
+  font-family: var(--mono);
+  color: var(--bright);
+  letter-spacing: -0.02em;
+}
+h1 { font-size: 1.9rem; line-height: 1.15; margin-bottom: 0.5em; }
+h2 { font-size: 1.15rem; margin-bottom: 0.8em; color: var(--accent); }
+h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.5em; }
+p  { margin-bottom: 1.1em; }
+em { color: var(--accent2); font-style: italic; }
+strong { color: var(--bright); font-weight: 600; }
+
+tw-link, tw-link:visited {
+  display: block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  color: var(--bright) !important;
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none !important;
+  line-height: 1.5;
+}
+tw-link:hover {
+  background: #1c2840;
+  border-left-color: var(--accent2);
+  color: var(--accent2) !important;
+  transform: translateX(5px);
+  box-shadow: 0 0 20px rgba(59,130,246,0.15);
+}
+
+.db {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px 22px;
+  margin: 24px 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+.dbtitle {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.mr { margin-bottom: 12px; }
+.ml { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.mn { color: var(--muted); }
+.mv { color: var(--bright); font-weight: 700; }
+.mb { height: 5px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.mf { height: 100%; border-radius: 99px; }
+.fe { background: var(--eng); }
+.fr { background: var(--rev); }
+.ft { background: var(--trust); }
+.fw { background: var(--wb); }
+
+.inbox { margin: 22px 0; }
+.mc {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 15px 18px;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+}
+.mfrom { font-family: var(--mono); color: var(--muted); font-size: 0.72rem; margin-bottom: 4px; }
+.msubj { font-weight: 600; color: var(--bright); margin-bottom: 7px; font-size: 0.9rem; }
+.mbody { color: var(--text); line-height: 1.65; }
+.mu  { border-left: 3px solid var(--danger); }
+.mg  { border-left: 3px solid var(--accent2); }
+.mw  { border-left: 3px solid var(--warn); }
+.mn2 { border-left: 3px solid var(--border); }
+
+.term {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: #040609;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  color: var(--accent2);
+  margin: 18px 0;
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+.term .tlabel {
+  color: var(--muted);
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; }
+
+.titlewrap {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
+.tlogo {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tmain {
+  font-family: var(--mono);
+  font-size: clamp(2.6rem, 8vw, 4.4rem);
+  font-weight: 700;
+  color: var(--bright);
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+.tsub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.trole {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 36px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  background: rgba(59,130,246,0.08);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.prog {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.pip       { height: 3px; flex: 1; border-radius: 99px; background: var(--border); }
+.pipdone   { background: var(--accent); }
+.pipactive { background: var(--accent2); }
+.proglabel {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.clabel {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+
+.endwrap { padding: 20px 0 40px; }
+.endtitle {
+  font-family: var(--mono);
+  font-size: 2rem;
+  color: var(--bright);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.endtag {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 26px;
+  display: block;
+}
+.tagbad  { color: var(--danger); }
+.tagmid  { color: var(--warn); }
+.taggood { color: var(--accent2); }
+
+.fgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 26px 0;
+}
+.fbox {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px;
+  font-family: var(--mono);
+  text-align: center;
+}
+.fval { font-size: 1.8rem; font-weight: 700; color: var(--bright); }
+.flbl { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 3px; }
+
+.rsrc {
+  background: rgba(59,130,246,0.06);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: var(--r);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+.rsrc .rtag {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.dbox {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 13px 18px;
+  margin-bottom: 8px;
+  font-size: 0.86rem;
+}
+.dround  { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; }
+.dchoice { color: var(--bright); font-weight: 600; }
+
+@media (max-width: 520px) {
+  tw-passage { padding: 20px 16px 60px; }
+  .tmain { font-size: 2.4rem; }
+}
